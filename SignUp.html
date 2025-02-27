@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Divno</title>
+        <meta name="description" content="" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo/logo.png"
+            type="image/x-icon"
+        />
+
+        <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/tailwind-build.css">
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-text-black"
+    >
+        <header
+            class="tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] lg:tw-justify-around"
+        >
+            <a 
+            class="sizing" href="">
+                <img
+                    src="./assets/logo/logo.png"
+                    alt="logo"
+                    class="tw-object tw-h-full tw-w-full"
+                />
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                >
+                    <a class="header-links" href="index.html"> Home </a>
+                    <a class="header-links" href=""> Our Mission </a>
+                    <a class="header-links" href=""> Sign Up </a>
+                </div>
+                <div
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <a
+                        href=""
+                        aria-label="signup"
+                        class="tw-rounded-md tw-border-[1px] tw-border-black tw-bg-transparent tw-px-3 tw-py-2 tw-text-black tw-transition-colors tw-duration-[0.3s] hover:tw-bg-black hover:tw-text-white"
+                    >
+                        <span>Download</span>
+                        <i class="bi bi-download"></i>
+                    </a>
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+    </section>
+
+    <section
+        class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%] max-md:tw-px-2"
+    >
+
+    
+
+        <div class="tw-bg-gray-100 tw-border-[1px] tw-border-black tw-h-[550px] tw-flex max-lg:tw-flex-col tw-max-h-[550px] tw-max-w-[80%]  max-lg:tw-max-h-fit max-lg:tw-h-full max-lg:tw-max-w-full tw-overflow-hidden tw-rounded-xl tw-w-full">
+            <!-- <img src="./assets/images/home/darkbg.png" alt="background" 
+                 class="tw-w-full tw-h-full"> -->
+
+            <div class="tw-flex tw-w-full tw-h-full max-lg:tw-place-items-center max-lg:tw-flex-col tw-place-content-center  tw-overflow-hidden">
+                
+                <div
+                    class="tw-flex tw-flex-col tw-h-full tw-place-content-center tw-gap-3  tw-p-6 max-md:tw-max-w-full"
+                    >
+                    <div class="FormJoin">
+                        <h2 class="tw-text-3xl tw-text-black max-md:tw-text-xl">
+                            Join Divno today!
+                        </h2>
+                        <div class="tw-text-gray-800">Lorem ipsum dolor sit.</div>
+                    </div>
+
+                    <form class="contact-form" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSc49YnSKFsKQ-AlkndYdrR6EzpEOsfktJMUkQE-vug28PDrrA/formResponse" id="google-form">
+                        <input type="text" name="entry.2005620554" placeholder="Name">
+                        <input type="text" name="entry.1045781291" placeholder="Email">
+                        <input type="text" name="entry.1166974658" placeholder="Phone Number">
+                        <input type="text" name="entry.1797574298" placeholder="Location">
+                        <input id="q1-c1" name="entry.839337160" type="text" value="Home Kitchen">
+
+                        <!-- <div class="fieldgroup hidden-flow">
+                            <p>Do you agree that custom google forms are cool?</p>
+                            <div class="check-group">
+                              <label for="q1-c1">Somewhat Agree</label>
+                              <input id="q1-c1" name="entry.839337160" type="radio" value="Somewhat Agree">
+                              <label for="q1-c2">Strongly Agree</label>
+                              <input id="q1-c2" name="entry.839337160" type="radio" value="Strongly Agree">
+                              <label for="q1-c3">Somewhat Disagree</label>
+                              <input id="q1-c3" name="entry.839337160" type="radio" value="Somewhat Disagree">
+                              <label for="q1-c4">Strongly Disagree</label>
+                              <input id="q1-c4" name="entry.839337160" type="radio" value="Strongly Disagree">
+                            </div>
+                          </div> -->
+        
+                        <button type="submit" type="submit" class="btn !tw-rounded-full !tw-text-gray-800 !tw-border-[1px] !tw-border-solid !tw-border-gray-800 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
+                    </form>
+
+                    
+                </div>
+                
+                <div class="tw-max-w-[60%] tw-w-full tw-h-full tw-flex max-lg:tw-max-w-full tw-place-content-end tw-place-items-center">
+                    <!-- <img src="./assets/images/home/loginScreen.png" alt="phone"
+                        class="tw-h-full tw-max-h-[90%] tw-object-contain"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+        </body>
+        <footer
+            class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[50%] tw-px-[10%] tw-text-white max-md:tw-flex-col"
+        >
+            <div
+                class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
+            >
+                <img
+                    src="./assets/logo/logo.png"
+                    alt="logo"
+                    srcset=""
+                    class="tw-max-w-[220px]"
+                />
+                <div class="widgets">Follow us</div>
+                <div class="tw-flex tw-gap-4 tw-text-2xl">
+                    <a href="" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a
+                        href="https://twitter.com/@pauls_freeman"
+                        aria-label="Twitter"
+                    >
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a
+                        href="https://instagram.com/"
+                        class="tw-h-[40px] tw-w-[40px]"
+                        aria-label="Instagram"
+                    >
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Company</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="" class="footer-link">Our Mission</a>
+                    <a href="" class="footer-link">Contact</a>
+                </div>
+            </div>
+
+            <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+                <h2 class="tw-text-3xl max-md:tw-text-xl">Resources</h2>
+                <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                    <a href="" class="footer-link">About us</a>
+                    <a href="" class="footer-link">Privacy policy</a>
+                    <a href="" class="footer-link">FAQ</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script src="./index.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>src="./form.js"</script>
+</html>

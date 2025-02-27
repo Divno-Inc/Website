@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    background-color: F2F2F2;
+}
+
+:root{
+
+    --bg-color: #fff;
+
+    --btn-color: white;/* button color*/
+    --btn-bg: #000;/* button bg color*/
+
+    --primary-text-color: #000;
+    --header-link-hover: #000;
+    --input-hover-bd-color: #000;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Ubuntu", sans-serif;
+    overflow: hidden;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* background: linear-gradient(
+        to right, 
+        #ffc83f33,  
+        #0099F6,
+        #E30069  
+    );
+    z-index: -1; */
+}
+
+header{
+    /* background-color: #fff;
+    color: #000; */
+    color: black; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: max-content;
+    
+}
+
+
+header > .collapsible-header{
+    display: flex;
+    left: 100px;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    background-color: inherit;
+    place-content: center;
+    overflow: hidden;
+    transition: width 0.3s ease;
+}
+
+
+.header-links {
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.5s, color 0.5s;
+    font-family: Chewy;
+}
+
+
+.header-links:hover {
+    color: #0099F6;
+    /* background-color: var(--header-link-hover); */
+}
+
+.primary-text-color{
+    color: var(--primary-text-color);
+}
+
+
+.signup-img-section{
+    background-image: url("../assets/images/home/darkbg.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.edge-gradient{
+    background: rgb(28, 28, 28);
+    background: linear-gradient(83deg, #ffffff 0%, #ffffff00 20%, #ffffff00 80%, rgb(255, 255, 255) 100%);
+}
+
+.scroller{
+    /* width: max-content;
+    flex-wrap: nowrap; */
+    animation: scroll 40s forwards linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+      animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+      animation-direction: forwards;
+  }
+  
+  .scroller[data-direction="left"] {
+      animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"]{
+      animation-duration: 30s;
+  }
+  
+  .scroller[data-speed="slow"]{
+      animation-duration: 80s;
+  }
+
+.opacity-0{
+    opacity: 0 !important;
+}
+
+.opacity-100{
+    opacity: 100 !important;
+}
+
+.btn{
+    padding: 10px 15px;
+    width: max-content;
+    border-radius: 5px;
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+/* .btn:hover{
+
+} */
+
+.btn:disabled{
+    cursor: default;
+}
+
+.input{
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    /* outline: none; */
+    min-width: 100px;
+    border: 1px solid #818080;
+    /* transition: border 0.3s; */
+}
+
+.input:active, .input:focus, .input:focus-within{
+    border: 1px solid var(--input-hover-bd-color) !important;
+}
+
+.carousel-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 800px;
+}
+  
+.carousel {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+  
+.carousel-img {
+    display: inline-block;
+    margin: 0 20px;
+}
+  
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.footer-link{
+    color: #434242;
+    transition: color 0.3s;
+}
+
+.footer-link:hover{
+    color: #0b0b0b;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Style for the collapsible content such as faq commonly known as: accordion */
+
+.faq{
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid #000;
+}
+
+.faq-accordion {
+    background-color: inherit;
+    color: #000000;
+    cursor: pointer;
+    padding: 15px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: height 0.4s;
+}
+
+.faq .content {
+    padding: 0px 18px;
+    color: #232323;
+    height: max-content;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: justify;
+    max-height: 0px;
+    transition: max-height 0.4s, padding 0.4s;
+}
+
+.faq-accordion .active,
+.faq-accordion:hover {
+    /* background-color: #2e2c2c; */
+}
+
+.sizing{
+    width: 100px;
+    height: 50px;
+}
+
+.title1{
+    position: relative;
+    font-size: 90px;
+    text-align: left;
+    font-family: Chewy;
+    right: 0px;
+    left: 100px;
+    bottom: 150px;
+    font-weight: 500;
+    color: black;
+    text-shadow: 
+    -2px -2px 0 #E30069 , 
+    2px -2px 0 #FFC83F,  
+    2px 2px 0 #0099F6;
+    overflow-x: hidden;
+
+
+    /* display: inline-block; 
+    background: linear-gradient(
+        to right, 
+        #ffc83f,  
+        #0099F6,
+        #E30069  
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: max-content;  */
+}
+
+.titles{
+    position: relative;
+    margin-right: 200px;
+}
+
+.blurb{
+    flex-direction: column;
+    text-align: left;
+    right: 140px;
+    bottom: 100px;
+    position: relative;
+    margin-left: 250px;
+    font-size: 30px;
+    overflow-x: hidden;
+    /* color: white; */
+}
+
+.location{
+    margin-right: 500px;
+    /* margin-bottom: 500px; */
+    width: 800px;
+    right: 150px;
+    overflow-x: hidden;
+}
+
+.buttonLocation{
+    position: relative;
+    bottom: 50px;
+    right: 205px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.FormJoin{
+    position: relative;
+    z-index: 1000;
+    bottom: 100PX;
+}
+
+.name{
+    position: relative;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+.spacing{
+    left: 200px;
+}
+
+.formSizing{
+    border-color: #000;
+}
+
+.footerLocation {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    bottom: 0; 
+    background: white; 
+    color: black !important;
+    font-family: Chewy;
+    box-shadow: 0px -2px 50px rgba(0, 0, 0, 0.1); 
+    bottom: 50px;
+}
+
+.widgetTab, .widgets{
+    position: relative;
+    left: -100px;
+    font-size: 30px;
+}
+
+.resources {
+    position: relative;
+    right: 900px;
+    bottom: 0px;
+}
+
+.company {
+    position: relative;
+    right: 50px;
+    bottom: 0px;
+}
+
+.Contacts {
+    position: relative;
+    right: 200px;
+    bottom: 0px;
+}
+
+
+@media not all and (min-width: 1024px) {
+
+    html, body{
+        overflow: visible;
+    }
+
+
+    header .collapsible-header {
+        position: fixed;
+        right: 0px;
+        flex-direction: column;
+        opacity: 0;
+        height: 100vh;
+        min-height: 100vh;
+        height: 100dvh;
+        width: 0vw;
+        justify-content: space-between;
+        padding: 5px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        place-items: end;
+        background-color: #040404;
+        color: #ffffff;
+        overflow-y: auto;
+        box-shadow: 3px 0px 3px 2px #9f9f9f;
+    }
+
+    .header-links{
+        color: rgb(255, 255, 255);
+    }
+
+    footer .collapsible-header{
+        position: fixed;
+        right: 0px;
+        flex-direction: column;
+        opacity: 0;
+        height: 100vh;
+        min-height: 100vh;
+        height: 100dvh;
+        width: 0vw;
+        justify-content: space-between;
+        padding: 5px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        place-items: end;
+        background-color: transparent;
+        color: black;
+        overflow-y: auto;
+        box-shadow: 3px 0px 3px 2px #9f9f9f;
+        
+    }
+    
+    img {
+        align-items: center;
+        max-width: 100%;
+        height: 100px;
+        object-fit: contain;
+      }
+    
+    .titles{
+        position: relative;
+        top: 250px;
+        font-size: 10px !important;
+        text-align: center;
+
+    }
+
+    .buttonLocation{
+        position: relative;
+        top: 400px;
+        object-fit: contain;
+    }
+
+    
+
+    .blurb{
+        position: relative;
+        top: 100px;
+        /* object-fit: contain; */
+        text-align: center;
+        align-items: center;
+
+    }
+
+}
