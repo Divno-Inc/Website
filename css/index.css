@@ -390,8 +390,19 @@ header > .collapsible-header{
 
 @media not all and (min-width: 1024px) {
 
+    html{
+        min-height: 300vh;
+
+    }
+
     html, body{
-        overflow: visible;
+        overflow: visible !important;
+    }
+
+    body{
+        flex: 1;
+        min-height: 200vh;
+        overflow: visible !important;
     }
 
 
@@ -419,33 +430,22 @@ header > .collapsible-header{
         color: rgb(255, 255, 255);
     }
 
-    footer .collapsible-header{
-        position: fixed;
-        right: 0px;
-        flex-direction: column;
-        opacity: 0;
-        height: 100vh;
-        min-height: 100vh;
-        height: 100dvh;
-        width: 0vw;
-        justify-content: space-between;
-        padding: 5px;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        place-items: end;
-        background-color: transparent;
-        color: black;
-        overflow-y: auto;
-        box-shadow: 3px 0px 3px 2px #9f9f9f;
-        
+    footer {
+        display: none !important;
+        position: relative; /* Prevents overlap issues */
+        width: 100%;
+        background-color: #333; /* Adjust as needed */
+        color: white;
+        text-align: center;
+        padding: 20px;
     }
-    
-    img {
-        align-items: center;
-        max-width: 100%;
-        height: 100px;
-        object-fit: contain;
-      }
+
+    .location {
+        position: relative;
+        width: 200px;
+        height: auto;
+        left: 150px;
+    }
     
     .titles{
         position: relative;
@@ -469,6 +469,7 @@ header > .collapsible-header{
         /* object-fit: contain; */
         text-align: center;
         align-items: center;
+        right: 125px;
 
     }
 
