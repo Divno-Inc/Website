@@ -391,7 +391,7 @@ header > .collapsible-header{
 @media not all and (min-width: 1024px) {
 
     html{
-        min-height: 300vh;
+        min-height: 200vh;
         overflow: visible !important;
     }
 
@@ -430,9 +430,10 @@ header > .collapsible-header{
         color: rgb(255, 255, 255);
     }
 
-    footer {
-        /* display: none !important; */
+    /* footer {
+        display: none !important;
         overflow: scroll;
+        min-height: 50vh;
         bottom: 0px;
         top: 500px;
         left: 0;
@@ -441,7 +442,16 @@ header > .collapsible-header{
         background-color: #333;
         color: white;
         text-align: center;
-        /* top: 200px; */
+        top: 200px;
+    } */
+
+    footer{
+        position: relative !important; 
+        bottom: 0px;
+        width: 100%;
+        overflow: hidden;
+        top: 200px;
+
     }
 
     .location {
@@ -449,7 +459,7 @@ header > .collapsible-header{
         width: 200px;
         height: auto;
         left: 150px;
-        bottom: 50px;
+        margin-bottom: 20px;
     }
     
     .titles{
@@ -462,9 +472,11 @@ header > .collapsible-header{
 
     .buttonLocation{
         position: relative;
-        top: 400px;
+        margin-top: 100px;
+        right: 0px;
         object-fit: contain;
         overflow: visible;
+        font-size: 20px;
     }
 
     
