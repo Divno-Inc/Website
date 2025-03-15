@@ -320,7 +320,15 @@ header > .collapsible-header{
     /* margin-bottom: 500px; */
     width: 800px;
     right: 150px;
+    height: 750px;
     overflow-x: hidden;
+    border: transparent solid;
+}
+
+.video{
+    border: transparent solid;
+    clip-path: inset(5% 5% 5% 5%);
+    overflow: hidden;
 }
 
 .buttonLocation{
